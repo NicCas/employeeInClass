@@ -39,9 +39,15 @@ public:
 
 int main() {
     Employee emplyA = {"Susan Meyers", 47899, "Accounting", "Vice President"};
+    Employee emplyB = {"Mark Jones", 39119, "IT", "Programmer"};
+    Employee emplyC = {"Joy Rogers", 81774, "Manufacturing", "Engineer"};
+
+    Employee ("Susan Meyers", 47899, "Accounting", "Vice President");
+
     return 0;
 }
 
+//Assign values to all variables
 Employee (string n, int i, string d, string p) {
     name = n;
     idNumber = i;
@@ -49,11 +55,13 @@ Employee (string n, int i, string d, string p) {
     position = p;
 }
 
+//Assign values to name variables and id variables
 Employee (string n, int i) {
     name = n;
     idNumber = i;
 }
 
+//Fill all variables as blank
 Employee(){
     name = "";
     idNumber = 0;
