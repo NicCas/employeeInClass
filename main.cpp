@@ -40,15 +40,17 @@ public:
 };
 
 void Employee::printEmp() const{
-    cout << name << "   " << idNumber << "   " << department << "   " << position << endl;
+    cout << "   " << name << "   " << idNumber << "   " << department << "   " << position << endl;
 }
 
 int main() {
+    //Declare Objects
     Employee emplyA = {"Susan Meyers", 47899, "Accounting", "Vice President"};
     Employee emplyB = Employee ("Joy Rogers", 81774, "Manufacturing", "Engineer");
     Employee emplyC = Employee ("Mark Jones", 39119);
     Employee emplyD = Employee ();
 
+    //Print Objects
     emplyA.printEmp();
     emplyB.printEmp();
     emplyC.printEmp();
