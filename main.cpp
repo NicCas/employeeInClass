@@ -34,37 +34,47 @@ public:
     Employee (string n, int i, string d, string p);
     Employee (string n, int i);
     Employee();
+
+    void printEmp () const;
+
 };
 
+void Employee::printEmp() const{
+    cout << name << "   " << idNumber << "   " << department << "   " << position << endl;
+}
 
 int main() {
     Employee emplyA = {"Susan Meyers", 47899, "Accounting", "Vice President"};
-    Employee emplyB = {"Mark Jones", 39119, "IT", "Programmer"};
-    Employee emplyC = {"Joy Rogers", 81774, "Manufacturing", "Engineer"};
+    Employee emplyB = Employee ("Joy Rogers", 81774, "Manufacturing", "Engineer");
+    Employee emplyC = Employee ("Mark Jones", 39119);
+    Employee emplyD = Employee ();
 
-    Employee ("Susan Meyers", 47899, "Accounting", "Vice President");
+    emplyA.printEmp();
+    emplyB.printEmp();
+    emplyC.printEmp();
+    emplyD.printEmp();
 
     return 0;
 }
 
 //Assign values to all variables
-Employee (string n, int i, string d, string p) {
+Employee::Employee (string n, int i, string d, string p) {
     name = n;
     idNumber = i;
     department = d;
     position = p;
-}
+};
 
 //Assign values to name variables and id variables
-Employee (string n, int i) {
+Employee::Employee (string n, int i) {
     name = n;
     idNumber = i;
-}
+};
 
 //Fill all variables as blank
-Employee(){
+Employee::Employee(){
     name = "";
     idNumber = 0;
     department = "";
     position = "";
-}
+};
